@@ -14,6 +14,12 @@
 		59974DE02BA8871B001C9D35 /* AirbnbTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974DDF2BA8871B001C9D35 /* AirbnbTutorialTests.swift */; };
 		59974DEA2BA8871B001C9D35 /* AirbnbTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974DE92BA8871B001C9D35 /* AirbnbTutorialUITests.swift */; };
 		59974DEC2BA8871B001C9D35 /* AirbnbTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974DEB2BA8871B001C9D35 /* AirbnbTutorialUITestsLaunchTests.swift */; };
+		59974E042BA88A6A001C9D35 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E032BA88A6A001C9D35 /* ExploreView.swift */; };
+		59974E082BA8C3EC001C9D35 /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E072BA8C3EC001C9D35 /* ListingItemView.swift */; };
+		59974E0A2BA996CF001C9D35 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E092BA996CF001C9D35 /* SearchAndFilterBar.swift */; };
+		59974E0C2BA9AE18001C9D35 /* ListeningDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E0B2BA9AE18001C9D35 /* ListeningDetailView.swift */; };
+		59974E0F2BA9B0CB001C9D35 /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E0E2BA9B0CB001C9D35 /* ListingImageCarouselView.swift */; };
+		59974E112BAB227D001C9D35 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E102BAB227D001C9D35 /* DestinationSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		59974DE52BA8871B001C9D35 /* AirbnbTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirbnbTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59974DE92BA8871B001C9D35 /* AirbnbTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbTutorialUITests.swift; sourceTree = "<group>"; };
 		59974DEB2BA8871B001C9D35 /* AirbnbTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		59974E032BA88A6A001C9D35 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		59974E072BA8C3EC001C9D35 /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
+		59974E092BA996CF001C9D35 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
+		59974E0B2BA9AE18001C9D35 /* ListeningDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningDetailView.swift; sourceTree = "<group>"; };
+		59974E0E2BA9B0CB001C9D35 /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
+		59974E102BAB227D001C9D35 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +106,10 @@
 		59974DCD2BA88718001C9D35 /* AirbnbTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				59974DCE2BA88718001C9D35 /* AirbnbTutorialApp.swift */,
+				59974DFB2BA8882E001C9D35 /* Utils */,
+				59974DFA2BA88817001C9D35 /* Extensions */,
+				59974DF92BA887FB001C9D35 /* Core */,
+				59974DF82BA887ED001C9D35 /* App */,
 				59974DD02BA88718001C9D35 /* ContentView.swift */,
 				59974DD22BA8871A001C9D35 /* Assets.xcassets */,
 				59974DD42BA8871A001C9D35 /* Preview Content */,
@@ -125,6 +140,105 @@
 				59974DEB2BA8871B001C9D35 /* AirbnbTutorialUITestsLaunchTests.swift */,
 			);
 			path = AirbnbTutorialUITests;
+			sourceTree = "<group>";
+		};
+		59974DF82BA887ED001C9D35 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				59974DCE2BA88718001C9D35 /* AirbnbTutorialApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		59974DF92BA887FB001C9D35 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				59974E0D2BA9B09A001C9D35 /* Components */,
+				59974DFC2BA8888E001C9D35 /* Listings */,
+				59974DFD2BA8889A001C9D35 /* Explore */,
+				59974E022BA88946001C9D35 /* TabBar */,
+				59974E012BA8892E001C9D35 /* Profile */,
+				59974E002BA888F7001C9D35 /* wishlists */,
+				59974DFF2BA888C8001C9D35 /* Root */,
+				59974DFE2BA888AB001C9D35 /* MapView */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		59974DFA2BA88817001C9D35 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59974DFB2BA8882E001C9D35 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		59974DFC2BA8888E001C9D35 /* Listings */ = {
+			isa = PBXGroup;
+			children = (
+				59974E072BA8C3EC001C9D35 /* ListingItemView.swift */,
+				59974E0B2BA9AE18001C9D35 /* ListeningDetailView.swift */,
+			);
+			path = Listings;
+			sourceTree = "<group>";
+		};
+		59974DFD2BA8889A001C9D35 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				59974E032BA88A6A001C9D35 /* ExploreView.swift */,
+				59974E092BA996CF001C9D35 /* SearchAndFilterBar.swift */,
+				59974E102BAB227D001C9D35 /* DestinationSearchView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		59974DFE2BA888AB001C9D35 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		59974DFF2BA888C8001C9D35 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		59974E002BA888F7001C9D35 /* wishlists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = wishlists;
+			sourceTree = "<group>";
+		};
+		59974E012BA8892E001C9D35 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		59974E022BA88946001C9D35 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		59974E0D2BA9B09A001C9D35 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				59974E0E2BA9B0CB001C9D35 /* ListingImageCarouselView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59974E0F2BA9B0CB001C9D35 /* ListingImageCarouselView.swift in Sources */,
+				59974E112BAB227D001C9D35 /* DestinationSearchView.swift in Sources */,
+				59974E082BA8C3EC001C9D35 /* ListingItemView.swift in Sources */,
 				59974DD12BA88718001C9D35 /* ContentView.swift in Sources */,
+				59974E042BA88A6A001C9D35 /* ExploreView.swift in Sources */,
+				59974E0A2BA996CF001C9D35 /* SearchAndFilterBar.swift in Sources */,
 				59974DCF2BA88718001C9D35 /* AirbnbTutorialApp.swift in Sources */,
+				59974E0C2BA9AE18001C9D35 /* ListeningDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
