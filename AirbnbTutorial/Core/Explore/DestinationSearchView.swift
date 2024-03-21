@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+enum DestinationSearchOptions {
+    case location
+    case dates
+    case guests
+}
+
 struct DestinationSearchView: View {
     @Binding var show: Bool
     @State private var destination = ""
+    @State private var selectedOption: DestinationSearchOptions = .location
     
     var body: some View {
         VStack {
@@ -26,24 +33,28 @@ struct DestinationSearchView: View {
             }
             
             VStack(alignment: .leading) {
-                Text("Where to?")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .imageScale(.small)
+                if selectedOption == .location {
+                    Text("Where to?")
+                        .font(.title2)
+                        .fontWeight(.semibold)
                     
-                    TextField("Search destination", text: $destination)
-                        .font(.subheadline)
-                }
-                .frame(height: 44)
-                .padding(.horizontal)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(lineWidth: 1.0)
-                        .foregroundStyle(Color(.systemGray4))
-                    
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .imageScale(.small)
+                        
+                        TextField("Search destination", text: $destination)
+                            .font(.subheadline)
+                    }
+                    .frame(height: 44)
+                    .padding(.horizontal)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(lineWidth: 1.0)
+                            .foregroundStyle(Color(.systemGray4))
+                        
+                    }
+                } else {
+                    CollapsedPickerView(title: "where", description: "Add destination")
                 }
             }
             .padding()
@@ -51,12 +62,43 @@ struct DestinationSearchView: View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding()
             .shadow(radius: 10)
+            .onTapGesture {
+                selectedOption = .location
+            }
             
             // date selection view
-            CollapsedPickerView(title: "when", description: "Add dates")
             
-            // num guests view
-            CollapsedPickerView(title: "Whi", description: "Add guests")
+            VStack {
+                if selectedOption == .dates {
+                    Text("Show expanded view")
+                } else {
+                    CollapsedPickerView(title: "when", description: "Add dates")
+                }
+            }
+            .padding()
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding()
+            .shadow(radius: 10)
+            .onTapGesture {
+                selectedOption = .dates
+            }
+            
+            VStack {
+                if selectedOption == .guests {
+                    Text("Show expanded view")
+                } else {
+                    CollapsedPickerView(title: "when", description: "Add guests")
+                }
+            }
+            .padding()
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding()
+            .shadow(radius: 10)
+            .onTapGesture {
+                selectedOption = .guests
+            }
             
         }
     }
@@ -84,10 +126,5 @@ struct CollapsedPickerView: View {
             .font(.subheadline)
             
         }
-        .padding()
-        .background(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding()
-        .shadow(radius: 10)
     }
 }
