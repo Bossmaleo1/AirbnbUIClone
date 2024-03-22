@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct ExploreView: View {
-    @State private var showDestinationSearchView = true
+    @State private var showDestinationSearchView = false
     
     var body: some View {
         NavigationStack {
-            
             if showDestinationSearchView {
                 DestinationSearchView(show: $showDestinationSearchView)
             } else {

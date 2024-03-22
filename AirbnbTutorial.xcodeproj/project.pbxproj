@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59057AD32BAC7C98003C1EC6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59057AD22BAC7C98003C1EC6 /* ProfileView.swift */; };
+		59057AD52BAC86E0003C1EC6 /* ProfileOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59057AD42BAC86E0003C1EC6 /* ProfileOptionRowView.swift */; };
+		59057AD72BAC8AC6003C1EC6 /* WishlistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59057AD62BAC8AC6003C1EC6 /* WishlistsView.swift */; };
+		59057AD92BAD2010003C1EC6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59057AD82BAD2010003C1EC6 /* MainTabView.swift */; };
 		59974DCF2BA88718001C9D35 /* AirbnbTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974DCE2BA88718001C9D35 /* AirbnbTutorialApp.swift */; };
 		59974DD12BA88718001C9D35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974DD02BA88718001C9D35 /* ContentView.swift */; };
 		59974DD32BA8871A001C9D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59974DD22BA8871A001C9D35 /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59057AD22BAC7C98003C1EC6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		59057AD42BAC86E0003C1EC6 /* ProfileOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionRowView.swift; sourceTree = "<group>"; };
+		59057AD62BAC8AC6003C1EC6 /* WishlistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistsView.swift; sourceTree = "<group>"; };
+		59057AD82BAD2010003C1EC6 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		59974DCB2BA88718001C9D35 /* AirbnbTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59974DCE2BA88718001C9D35 /* AirbnbTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbTutorialApp.swift; sourceTree = "<group>"; };
 		59974DD02BA88718001C9D35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -215,6 +223,7 @@
 		59974E002BA888F7001C9D35 /* wishlists */ = {
 			isa = PBXGroup;
 			children = (
+				59057AD62BAC8AC6003C1EC6 /* WishlistsView.swift */,
 			);
 			path = wishlists;
 			sourceTree = "<group>";
@@ -222,6 +231,8 @@
 		59974E012BA8892E001C9D35 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				59057AD22BAC7C98003C1EC6 /* ProfileView.swift */,
+				59057AD42BAC86E0003C1EC6 /* ProfileOptionRowView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 		59974E022BA88946001C9D35 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				59057AD82BAD2010003C1EC6 /* MainTabView.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -372,13 +384,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				59974E0F2BA9B0CB001C9D35 /* ListingImageCarouselView.swift in Sources */,
+				59057AD32BAC7C98003C1EC6 /* ProfileView.swift in Sources */,
+				59057AD52BAC86E0003C1EC6 /* ProfileOptionRowView.swift in Sources */,
 				59974E112BAB227D001C9D35 /* DestinationSearchView.swift in Sources */,
 				59974E082BA8C3EC001C9D35 /* ListingItemView.swift in Sources */,
 				59974DD12BA88718001C9D35 /* ContentView.swift in Sources */,
+				59057AD72BAC8AC6003C1EC6 /* WishlistsView.swift in Sources */,
 				59974E042BA88A6A001C9D35 /* ExploreView.swift in Sources */,
 				59974E0A2BA996CF001C9D35 /* SearchAndFilterBar.swift in Sources */,
 				59974DCF2BA88718001C9D35 /* AirbnbTutorialApp.swift in Sources */,
 				59974E0C2BA9AE18001C9D35 /* ListeningDetailView.swift in Sources */,
+				59057AD92BAD2010003C1EC6 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
